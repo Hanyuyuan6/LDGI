@@ -47,7 +47,7 @@ The comparative imaging results are implemented in the `oneD_OPA_plus_grating_sc
 
 ---
 
-> **Please cite this work if you use or refer to this project:**  
+> **Please cite this work if helpful:**  
 > Han, Y., Zheng, H., Li, B., Li, J., Qiu, L., Hao, W., Dang, Z., Chen, H., Liu, J., He, Y., *et al.* (2025). Loop differential ghost imaging based on line pattern. *Optics Communications*, 131589. Elsevier.  
 > ```bibtex
 > @article{han2025loop,
