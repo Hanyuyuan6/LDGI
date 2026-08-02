@@ -1,0 +1,32 @@
+# Generated experiment data and MATLAB temporaries.
+data/
+outputs/
+results/
+*.asv
+*.m~
+slprj/
+codegen/
+
+# Secrets and machine-local credentials.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.token
+credentials.json
+.credentials.json
+secrets.toml
+.npmrc
+.pypirc
+.aws/
+.ssh/id_*
+
+# OS and editor metadata.
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
