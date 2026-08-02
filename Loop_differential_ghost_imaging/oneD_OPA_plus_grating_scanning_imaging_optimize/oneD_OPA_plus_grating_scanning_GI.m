@@ -1,12 +1,21 @@
 clc;
 clear;
 
-obj = imread("littleGI64.tif");   
-n = size(obj);                    
+targetImagePath = getenv('LDGI_TARGET_IMAGE');
+if isempty(targetImagePath)
+    targetImagePath = which('cameraman.tif');
+end
+if isempty(targetImagePath) || ~isfile(targetImagePath)
+    error(['No target image found. Set LDGI_TARGET_IMAGE to an authorized ', ...
+           'local image, or install the MATLAB sample image cameraman.tif.']);
+end
+obj = imread(targetImagePath);
 if size(obj, 3) == 3
     obj = rgb2gray(obj);  
 end
+obj = imresize(obj, [64, 64]);
 obj = im2double(obj);        
+n = size(obj);
 m = n(1);                     
 
 % Initialization
