@@ -1,10 +1,12 @@
 # Loop Differential Ghost Imaging Based on Line Pattern
 
+Published paper: [Loop differential ghost imaging based on line pattern](https://doi.org/10.1016/j.optcom.2025.131589) (Optics Communications, 2025).
+
 MATLAB research code for loop differential ghost imaging (LDGI) with optical-phased-array line patterns.
 
 ## Requirements
 
-- MATLAB with Image Processing Toolbox.
+- MATLAB with Image Processing Toolbox and Signal Processing Toolbox (for `sinc`).
 - The scripts use an authorized local target image. Set `LDGI_TARGET_IMAGE` to a file path; otherwise they fall back to MATLAB's local `cameraman.tif` sample. Images are resized to 64x64 for the released experiment geometry.
 
 ```matlab
@@ -18,7 +20,14 @@ No target or result TIFF is redistributed by this repository. The removed files 
 - `Loop_differential_ghost_imaging/OPA_Speckle_patterns/`: simulations for OPA illumination patterns.
 - `Loop_differential_ghost_imaging/oneD_OPA_plus_grating_scanning_imaging_optimize/`: LDGI reconstruction and comparison scripts.
 
-Run MATLAB from the repository root, add the repository recursively to the path, set an optional target image, and then run the selected script.
+From the repository root in MATLAB, run the LDGI reconstruction example:
+
+```matlab
+run(fullfile(pwd, ...
+    'Loop_differential_ghost_imaging', ...
+    'oneD_OPA_plus_grating_scanning_imaging_optimize', ...
+    'op_succeed_FOR_PAPER.m'));
+```
 
 ## Citation
 
